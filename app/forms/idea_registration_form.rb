@@ -1,4 +1,4 @@
-class IdeaForm
+class IdeaRegistrationForm
     include ActiveModel::Model
     include ActiveModel::Attributes
 
