@@ -1,0 +1,72 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'node_modules/**/*'
+    - 'config/**/*'
+    - 'lib/tasks/auto_annotate_models.rake'
+    - 'app/channels/application_cable/*'
+
+Rails:
+  Enabled: true
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+# RSpec
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/Rails/HttpStatus:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/ScatteredLet:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 198
+
+Layout/FirstHashElementIndentation:
+  Exclude:
+    - 'app/forms/idea_search_form.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Metrics/BlockLength:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Style/RedundantInterpolation:
+  Enabled: false
+
